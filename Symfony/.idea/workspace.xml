@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5e6a9b20-d8bc-4ac5-8cd1-ffc5fca9aef2" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="950531809">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.42" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="json" value="11" />
+          <entry key="php" value="66" />
+          <entry key="twig" value="43" />
+          <entry key="txt" value="171" />
+          <entry key="yml" value="27" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JSON" value="11" />
+          <entry key="PHP" value="66" />
+          <entry key="PLAIN_TEXT" value="171" />
+          <entry key="Twig" value="43" />
+          <entry key="YAML" value="27" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="json" value="1" />
+          <entry key="php" value="11" />
+          <entry key="twig" value="4" />
+          <entry key="yml" value="9" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JSON" value="1" />
+          <entry key="PHP" value="11" />
+          <entry key="Twig" value="4" />
+          <entry key="YAML" value="9" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FrameworkCommandLineHistory">
+    <commandsHistory>
+      <command text="s generate:bundle" />
+      <command text="c dump-autoload" />
+      <command text="s doctrine:mapping:convert --force --from-database annotation ./src/FilmBundle/Entity" />
+      <command text="s doctrine:generate:entities Acteur" />
+      <command text="s doctrine:generate:entities FilmBundle/Entity" />
+      <command text="s doctrine:generate:crud --entity=FilmBundle:Acteur --format=yml --route-prefix=/Auteur --with-write  --overwrite --no-interaction " />
+      <command text="s doctrine:generate:crud --entity=FilmBundle:Adherent --format=yml --route-prefix=/Adherent --with-write  --overwrite --no-interaction " />
+      <command text="s doctrine:generate:crud --entity=FilmBundle:Categorie --format=yml --route-prefix=/Categorie --with-write  --overwrite --no-interaction " />
+      <command text="s doctrine:generate:crud --entity=FilmBundle:Emprunt --format=yml --route-prefix=/Emprunt --with-write  --overwrite --no-interaction " />
+      <command text="s doctrine:generate:crud --entity=FilmBundle:Film --format=yml --route-prefix=/Film --with-write  --overwrite --no-interaction " />
+    </commandsHistory>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/FilmBundle/Entity/Acteur.php" />
+        <option value="$PROJECT_DIR$/src/FilmBundle/Entity/Adherent.php" />
+        <option value="$PROJECT_DIR$/src/FilmBundle/Entity/Categorie.php" />
+        <option value="$PROJECT_DIR$/src/FilmBundle/Entity/Emprunt.php" />
+        <option value="$PROJECT_DIR$/src/FilmBundle/Entity/Film.php" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/FilmBundle/Form/ActeurType.php" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/FilmBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/app/Resources/views/acteur/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/acteur/show.html.twig" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/incenteev/composer-parameter-handler" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-85" />
+    <option name="y" value="15" />
+    <option name="width" value="650" />
+    <option name="height" value="703" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Symfony" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="acteur" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="FilmBundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="FilmBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="FilmBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="FilmBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Symfony" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="FilmBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="routing" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5e6a9b20-d8bc-4ac5-8cd1-ffc5fca9aef2" name="Default Changelist" comment="" />
+      <created>1558626336274</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1558626336274</updated>
+      <workItem from="1558626337601" duration="9560000" />
+      <workItem from="1558721403888" duration="602000" />
+      <workItem from="1559002084396" duration="239000" />
+      <workItem from="1559005155714" duration="93000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="10494000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Command Line Tools Console" order="10" visible="true" weight="0.299509" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml" />
+    <entry file="file://$PROJECT_DIR$/src/FilmBundle/Entity/Emprunt.php" />
+    <entry file="file://$PROJECT_DIR$/src/FilmBundle/Entity/Categorie.php" />
+    <entry file="file://$PROJECT_DIR$/src/FilmBundle/Entity/Film.php" />
+    <entry file="file://$PROJECT_DIR$/src/FilmBundle/Controller/ActeurController.php" />
+    <entry file="file://$PROJECT_DIR$/src/FilmBundle/Form/ActeurType.php" />
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml" />
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml" />
+    <entry file="file://$PROJECT_DIR$/src/FilmBundle/Resources/config/routing/acteur.yml" />
+    <entry file="file://$PROJECT_DIR$/src/FilmBundle/Resources/config/routing/adherent.yml" />
+    <entry file="file://$PROJECT_DIR$/composer.json" />
+    <entry file="file://$PROJECT_DIR$/src/FilmBundle/Entity/Acteur.php" />
+    <entry file="file://$PROJECT_DIR$/src/FilmBundle/Entity/Adherent.php" />
+    <entry file="file://$PROJECT_DIR$/src/FilmBundle/Controller/AdherentController.php" />
+    <entry file="file://$PROJECT_DIR$/src/FilmBundle/Form/AdherentType.php" />
+    <entry file="file://$PROJECT_DIR$/src/FilmBundle/Resources/config/routing.yml" />
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/acteur/index.html.twig" />
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/acteur/show.html.twig" />
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/acteur/edit.html.twig" />
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+  </component>
+</project>

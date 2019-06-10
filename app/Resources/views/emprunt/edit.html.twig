@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+
+    {% block body %}
+        <div class="row" style="margin-left: 2%">
+            <div class="col-md-2">
+                <div class="box" style="width: 280%; margin-top: 10%; padding-bottom: 2% ">
+                    <div class="box-header">
+                        <h1 class="box-title"> Editer l'emprunt de <code>{% if emprunt.film %}{{ emprunt.film }}{% endif %}</code>
+                            {% if emprunt.adherent %}par{% if emprunt.adherent.nom %}{{ emprunt.adherent.nom }}{% endif %}
+                            {% if emprunt.adherent.prenom %}{{ emprunt.adherent.prenom }}{% endif %}{% endif %} </h1>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-9">
+
+                <div class="box" style="margin-left: 33%; margin-right: 20%; width: 66%; margin-top: 2%; padding-bottom: 2% ">
+
+                    <!-- /.box-header -->
+                    <div class="box-body no-padding">
+                        {{ form_start(edit_form) }}
+                        <table class="table table-condensed table-responsive" style="margin-left: 5%;margin-top: 2%">
+
+                            <tr >
+                                <th width="5%">  Id Emprunt </th>
+                                <td width="15%">
+                                    {{ emprunt.idEmprunt }}
+                                </td>
+                                <td width="3%"></td>
+                            </tr>
+                            <tr >
+                                <th width="5%"> Date d'emprunt </th>
+                                <td width="15%" >
+                                    {{ emprunt.dhEmprunt|date('Y-m-d H:i:s') }}
+                                </td> <td width="3%"></td>
+                            </tr >
+                            <tr >
+                                <th width="5%"> Date de retour </th>
+                                <td width="15%" >
+                                    {{ form_start(edit_form) }}
+                                    {{ form_widget(edit_form.dhRetour) }}
+                                </td> <td width="3%"></td>
+                            </tr >
+                            <tr style="display: none">
+                                <th width="5%"> Date d'emprunt </th>
+                                <td width="15%" >
+                                    {{ form_widget(edit_form.dhEmprunt)}}
+                                </td> <td width="3%"></td>
+                            </tr >
+                            <tr >
+                                <th width="5%"> Film </th>
+                                <td width="15%" >
+                                    {{ form_widget(edit_form.film) }}
+                                </td> <td width="3%"></td>
+                            </tr >
+                            <tr >
+                                <th width="5%"> Adherent </th>
+                                <td width="15%" >
+
+                                        {{ form_widget(edit_form.adherent) }}
+
+                                </td> <td width="3%"></td>
+                            </tr >
+                        </table>
+                        <div class="row">
+                            <div class="col-md-2 offset-md-1"  style="margin-left: 32%;">
+                                <input class="btn btn-outline-primary" type="submit" value="Edit" />
+                            </div>
+                            {{ form_end(edit_form) }}
+                            <li>
+                                {{ form_start(delete_form) }}
+                                <input type="submit" value="Delete">
+                                {{ form_end(delete_form) }}
+                            </li>
+                            <div class="col-md-3">
+                                <a class="btn btn-info" href="{{ path('Emprunt_index') }}">Back to the list</a>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+
+            </div>
+        </div>
+
+
+    {% endblock %}

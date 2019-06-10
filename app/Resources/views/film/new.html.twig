@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <div class="box" style="margin-left: 16%; margin-right: 25%; width: 70%; margin-top: 2%; padding-bottom: 2% ">
+        <div class="box-header">
+            <h1 class="box-title"> Ajouter un <code>film</code> </h1>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body no-padding">
+            {{ form_start(form) }}
+            <table class="table table-condensed table-responsive" style="margin-left: 15%">
+
+                <tr>
+                    <th width="10%"> Titre </th>
+                    <td width="20%">
+                        {{ form_widget(form.titre) }}
+                    </td>
+                    <td width="10%">
+
+                    </td>
+                </tr>
+                <tr>
+                    <th width="10%"> Date de sortie </th>
+                    <td width="20%" class="offset-md-5">
+                        {{ form_widget(form.dateSortie) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th width="10%"> Description </th>
+                    <td width="20%" class="offset-md-5">
+                        {{ form_widget(form.description) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th width="10%"> Disponible </th>
+                    <td width="20%" class="offset-md-5">
+                        {{ form_widget(form.disponible) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th width="10%"> Couverture </th>
+                    <td width="20%" class="offset-md-5">
+                        {{ form_widget(form.file) }}
+                      <div style="display: none"> {{ form_widget(form.couverture) }}</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th style="display: none" width="10%"> Date de création </th>
+                    <td style="display: none" width="20%" class="offset-md-5">
+                        {{ form_widget(form.createdAt) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th style="display: none" width="10%"> Date de mise à jours </th>
+                    <td style="display: none" width="20%" class="offset-md-5">
+                        {{ form_widget(form.updatedAt) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th width="10%"> <label  style="margin-top: 4%">Catégorie </label></th>
+                    <td width="20%" class="offset-md-5">
+                        {{ form_widget(form.categorie) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th width="10%"> Acteurs </th>
+                    <td width="20%" class="offset-md-5">
+                        {{ form_widget(form.acteur) }}
+                    </td>
+                </tr>
+
+            </table>
+            <div class="row">
+                <div class="col-md-2 offset-md-1"  style="margin-left: 32%;">
+                    <span>  <input type="submit" value="Create" class="btn btn-info" /> </span>
+                </div>
+
+                <div class="col-md-3">
+                    <a class="btn btn-info" href="{{ path('Film_index') }}">Back to the list</a>
+                </div>
+                {{ form_end(form) }}
+            </div>
+
+
+
+        </div>
+        <!-- /.box-body -->
+    </div>
+{% endblock %}

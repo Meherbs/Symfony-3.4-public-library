@@ -1,0 +1,162 @@
+
+
+{% block body %}
+
+    <a class="aff" id="{{ acteur.idActeur }}" href="" data-toggle="modal"
+       data-target="#modal-primary{{ acteur.idActeur }}"> show  </a>
+
+        <div class="modal modal-primary fade" id="modal-primary{{ acteur.idActeur }}">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title text-center">Information de l'acteur {{ acteur.idActeur }} </h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table-responsive table-condensed tab-success" style="margin-left: 8%">
+                        <tr>
+                            <th width="10% mar" style="font-size: 18px"> Id Acteur </th>
+                            <td width="10%" style="font-size: 18px">
+                                {{ acteur.idActeur }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="10%" style="font-size: 18px"> Nom </th>
+                            <td width="10%" style="font-size: 18px">
+                                {{ acteur.nom }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="10%" style="font-size: 18px"> Prenom </th>
+                            <td width="10%" class="offset-md-3" style="font-size: 18px">
+                                {{ acteur.prenom }}
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th width="10%" style="font-size: 18px"> Date de naissance </th>
+                            <td width="10%" style="font-size: 18px">
+                                {% if acteur.dateNaiss %}{{ acteur.dateNaiss|date('Y-m-d') }}{% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="10%" style="font-size: 18px"> Sexe </th>
+                            <td width="10%" class="offset-md-3" style="font-size: 18px">
+                                {% if acteur.sexe %}Homme{% else %}Femme{% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="10%" style="font-size: 18px"> Nationalité </th>
+                            <td width="10%" style="font-size: 18px" class="offset-md-3">
+                                {{ acteur.nationalite }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="10%" style="font-size: 18px"> Date de création </th>
+                            <td width="10%" class="offset-md-3" style="font-size: 18px">
+                                {% if acteur.createdAt %}{{ acteur.createdAt|date('Y-m-d H:i:s') }}{% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="10%" style="font-size: 18px"> Date de mise à jours </th>
+                            <td width="10%" class="offset-md-3" style="font-size: 18px">
+                                {% if acteur.updatedAt %}{{ acteur.updatedAt|date('Y-m-d H:i:s') }}{% endif %}
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                    {{ form_start(delete_form) }}
+                    <input type="submit" class="btn btn-outline" value="Delete">
+                    {{ form_end(delete_form) }}
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    </div>
+
+
+    <!--
+    <div class="box" style="margin-left: 16%; margin-right: 25%; width: 70%; margin-top: 10% ">
+        <div class="box-header">
+            <h3 class="box-title">Information de l'acteur {##}{ acteur.idActeur }}</h3>
+        </div>
+        <!-- /.box-header
+        <div class="box-body no-padding">
+            <table class="table table-condensed table-responsive" style="margin-left: 2%">
+                <tr>
+                    <th width="10% mar"> Id Acteur </th>
+                    <td width="10%">
+                        {##}{ acteur.idActeur }}
+                    </td>
+                    <td width="10%">
+                            <a href="{##}{ path('Auteur_index') }}">Back to the list</a>
+                    </td>
+
+                </tr>
+                <tr>
+                    <th width="10%"> Nom </th>
+                    <td width="10%">
+                        {##}{ acteur.nom }}
+                    </td>
+                    <td width="10%">
+                            <a href="{##}{ path('Auteur_edit', { 'idActeur': acteur.idActeur }) }}">Edit</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th width="10%"> Prenom </th>
+                    <td width="10%" class="offset-md-3">
+                        {##}{ acteur.prenom }}
+                    </td>
+                    <td width="10%">
+                            {##}{ form_start(delete_form) }}
+                            <input type="submit" value="Delete">
+                            {##}{ form_end(delete_form) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th width="10%"> Date de naissance </th>
+                    <td width="10%">
+                        {##}% if acteur.dateNaiss %}{##}{ acteur.dateNaiss|date('Y-m-d') }}{##}% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <th width="10%"> Sexe </th>
+                    <td width="10%" class="offset-md-3">
+                        {##}% if acteur.sexe %}Homme{##}% else %}Femme{##}% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <th width="10%"> Nationalité </th>
+                    <td width="10%" class="offset-md-3">
+                        {##}{ acteur.nationalite }}
+                    </td>
+                </tr>
+                <tr>
+                    <th width="10%"> Date de création </th>
+                    <td width="10%" class="offset-md-3">
+                        {##}% if acteur.createdAt %}{##}{ acteur.createdAt|date('Y-m-d H:i:s') }}{##}% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <th width="10%"> Date de mise à jours </th>
+                    <td width="10%" class="offset-md-3">
+                        {##}% if acteur.updatedAt %}{##}{ acteur.updatedAt|date('Y-m-d H:i:s') }}{##}% endif %}
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+        <!-- /.box-body
+    </div>
+-->
+
+
+{% endblock %}

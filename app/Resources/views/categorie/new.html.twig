@@ -1,0 +1,40 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="box" style="margin-left: 16%; margin-right: 25%; width: 70%; margin-top: 2%; padding-bottom: 2% ">
+        <div class="box-header">
+            <h3 class="box-title"> Create new Category</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body no-padding">
+            {{ form_start(form) }}
+            <table class="table table-condensed table-responsive" style="margin-left: 15%">
+
+                <tr>
+
+                    <td width="20%">
+                        {{ form_start(form) }}
+                        {{ form_widget(form) }}
+                    </td>
+                    <td width="10%">
+                    </td>
+            </table>
+            <div class="row">
+                <div class="col-md-2 offset-md-1"  style="margin-left: 32%;">
+                    <input type="submit" value="Create" />
+                </div>
+
+                <div class="col-md-3">
+                    <a class="btn btn-info" href="{{ path('Categorie_index') }}">Back to the list</a>
+                </div>
+                {{ form_end(form) }}
+            </div>
+
+
+
+        </div>
+        <!-- /.box-body -->
+    </div>
+{% endblock %}

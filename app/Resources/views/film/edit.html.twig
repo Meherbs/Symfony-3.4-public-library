@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="row" style="margin-left: 2%">
+    <div class="col-md-2">
+        <div class="box" style="height:476px;width: 285%; margin-top: 10%; padding-bottom: 2% ">
+            <div class="box-header">
+                <h1 class="box-title" style="margin-left: 15%"> Editer le  Film <code>{{ film.titre }}</code></h1>
+            </div>
+            <img style="margin-left: 7%;margin-bottom: 1%" width="300px" height="400px" src="{{ asset('images/film/') }}{{ film.couverture }}">
+
+        </div>
+    </div>
+    <div class="col-md-9">
+
+    <div class="box" style="margin-left: 33%; margin-right: 20%; width: 66%; margin-top: 2%; padding-bottom: 4% ">
+
+        <!-- /.box-header -->
+        <div class="box-body no-padding">
+            {{ form_start(edit_form) }}
+            <table class="table table-condensed table-responsive" style="margin-left: 5%;margin-top: 2%">
+
+                <tr >
+                    <th width="5%"> Titre   </th>
+                    <td width="15%">
+                        {{ form_widget(edit_form.titre) }}
+                    </td>
+                    <td width="3%"></td>
+                </tr>
+                <tr >
+                    <th width="5%"> Date de sortie </th>
+                    <td width="15%" >
+                        {{ form_widget(edit_form.dateSortie) }}
+                    </td> <td width="3%"></td>
+                </tr >
+                <tr >
+                    <th width="5%"> Description </th>
+                    <td width="15%" >
+                        {{ form_widget(edit_form.description) }}
+                    </td> <td width="3%"></td>
+                </tr>
+                <tr >
+                    <th width="5%"> Disponible </th>
+                    <td width="15%" >
+                        {{ form_widget(edit_form.disponible) }}
+                    </td> <td width="3%"></td>
+                </tr>
+                <tr >
+                    <th width="5%"> Couverture </th>
+                    <td width="15%" >
+                        {{ form_widget(edit_form.file) }}  {{ form_widget(edit_form.couverture, { 'attr':{'disabled':'disabled'} }) }}
+                    </td> <td width="3%"></td>
+                </tr>
+
+                <tr  style="display: none">
+                    <th width="5%"> Date de création </th>
+                    <td width="15%" >
+                        {{ form_widget(edit_form.createdAt) }}
+                    </td> <td width="3%"></td>
+                </tr>
+                <tr  style="display: none">
+                    <th width="5%"> Date de mise à jours </th>
+                    <td width="15%" >
+                        {{ form_widget(edit_form.updatedAt) }}
+                    </td> <td width="3%"></td>
+                </tr>
+                <tr >
+                    <th width="5%"> Catégorie </th>
+                    <td width="15%" >
+                        {{ form_widget(edit_form.categorie) }}
+                    </td> <td width="2%"></td>
+                </tr>
+                <tr >
+                    <th width="5%"> Acteur </th>
+                    <td width="15%" >
+                        {{ form_widget(edit_form.acteur) }}
+                    </td>
+                    <td width="2%"></td>
+                </tr>
+
+            </table>
+            <div class="row">
+                <div class="col-md-2 offset-md-1"  style="margin-left: 32%;">
+                    <input type="submit" value="Edit" class="btn btn-info" />
+                    {{ form_end(edit_form) }}
+                </div>
+
+                <div class="col-md-3">
+                    <a class="btn btn-info" href="{{ path('Film_index') }}">Back to the list</a>
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <!-- /.box-body -->
+    </div>
+
+    </div>
+</div>
+
+{% endblock %}

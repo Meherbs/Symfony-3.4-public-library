@@ -1,0 +1,52 @@
+
+
+{% block body %}
+
+<div class="row">
+    <section class="content-header">
+        <h1>
+            Liste des films empruntés
+        </h1>
+    </section>
+    <div class="row">
+        <!-- Content Header (Page header) -->
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-success">
+                    <tr>
+                        <th class="text-center">Id_Emprunt</th>
+                        <th class="text-center">Film</th>
+
+                        <th class="text-center">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody class="tabcontent-border">
+
+                        <tr>
+                            <td style="text-align: center">
+                                {{ emprunt.getIdEmprunt() }}
+                            </td>
+                            <td>{{ emprunt.getFilm().getTitre() }}</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        {{ form_start(delete_form) }}
+                                        <input type="submit" value="Delete">
+                                        {{ form_end(delete_form) }}
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- /.table-responsive -->
+        </div>
+        <!-- column -->
+
+    </div>
+{% endblock %}

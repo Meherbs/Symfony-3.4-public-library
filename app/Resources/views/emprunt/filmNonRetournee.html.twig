@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row" style="height: auto">
+        <section class="content-header">
+            <h1>
+                Liste des emprunts
+                <small class="list-group-item-action">
+                    <a href="{{ path('Emprunt_new') }}">Emprunter de nouveau</a>
+                </small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="#"> Emprunt </a></li>
+                <li class="active">Liste des emprunts</li>
+            </ol>
+        </section>
+        <div class="row">
+            <!-- Content Header (Page header) -->
+
+
+            <!-- /.box-header -->
+            <div class="box-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-success">
+                        <tr>
+                            <th class="text-center"> Emprunt Id </th>
+                            <th class="text-center"> Date d'emprunt </th>
+                            <th class="text-center"> Film  </th>
+                            <th class="text-center"> Adhérent  </th>
+                            <th class="text-center"> Date de retour  </th>
+                            <th class="text-center"> Action  </th>
+                        </tr>
+                        </thead>
+                        <tbody class="tabcontent-border">
+                        {% for emprunt in emprunts %}
+                            <tr>
+                                <td class="text-center">{% if emprunt.getIdEmprunt() %} {{ emprunt.getIdEmprunt() }} {% endif %}</td>
+                                <td class="text-center">{% if emprunt.getDhEmprunt() %} {{ emprunt.getDhEmprunt()|date('Y-m-d H:i:s') }} {% endif %}</td>
+                                <td class="text-center">
+                                    {% if emprunt.getFilm() %}
+                                        <a href="{{ path('Film_show', { 'idFilm': emprunt.getFilm().getIdFilm() }) }}">
+                                        {{ emprunt.getFilm().getTitre() }}
+                                    {% endif %}
+                                </td>
+
+                                <td class="text-center">
+                                    {% if emprunt.getAdherent() %}
+                                        {{ render(controller('FilmBundle:Adherent:show',{'id':emprunt.getAdherent().idAdherent})) }}
+                                    {% endif %}
+                                </td>
+                                <td class="text-center"> {% if emprunt.dhRetour %}{{ emprunt.getDhRetour()|date('Y-m-d H:i:s') }}{% endif %}</td>
+                                <td>
+                                    {% if emprunt.getIdEmprunt() %}
+                                        <ul>
+                                            <li>
+                                                <a href="{{ path('Emprunt_edit', { 'idEmprunt': emprunt.getIdEmprunt() }) }}">Editer</a>
+                                            </li>
+
+                                        </ul>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- <div class="navigation text-center">
+                    {##}{ knp_pagination_render(categories) }}
+                </div>
+
+                <!-- /.table-responsive -->
+            </div>
+            <!-- column -->
+
+        </div>
+
+    </div>
+
+{% endblock %}

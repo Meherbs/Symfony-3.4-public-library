@@ -1,0 +1,82 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="row" style="height: auto">
+    <section class="content-header">
+        <h1>
+            Liste des acteurs
+            <small class="list-group-item-action">
+                    <a href="{{ path('Auteur_new') }}">Creer un nouveau acteur </a>
+            </small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#"> Acteurs </a></li>
+            <li class="active">Liste des acteurs</li>
+        </ol>
+    </section>
+    <div class="row">
+        <!-- Content Header (Page header) -->
+
+
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead class="table-success">
+                    <tr>
+                        <th class="text-center">Id_Acteur</th>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th style="display: none">Date_naissance</th>
+                        <th>Sexe</th>
+                        <th>Nationalite</th>
+                        <th style="display: none">Date de creation</th>
+                        <th style="display: none">Date de mise a jour</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody class="tabcontent-border">
+                    {% for acteur in acteurs %}
+                        <tr>
+                            <td style="text-align: center">
+                                {{ acteur.idActeur }}
+                            </td>
+                            <td>{{ acteur.nom }}</td>
+                            <td>{{ acteur.prenom }}</td>
+                            <td style="display: none">{% if acteur.dateNaiss %}{{ acteur.dateNaiss|date('Y-m-d') }}{% endif %}</td>
+                            <td>{% if acteur.sexe %}Homme{% else %}Femme{% endif %}</td>
+                            <td>{{ acteur.nationalite }}</td>
+                            <td style="display: none">{% if acteur.createdAt %}{{ acteur.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                            <td style="display: none">{% if acteur.updatedAt %}{{ acteur.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                            <td>
+                                <ul>
+                                    <li>
+                                        {{ render(controller('FilmBundle:Acteur:show',{'id':acteur.idActeur})) }}
+                                    </li>
+                                    <li>
+                                        <a href="{{ path('Auteur_edit', { 'idActeur': acteur.idActeur }) }}">Editer</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="navigation text-center">
+                {{ knp_pagination_render(acteurs) }}
+            </div>
+
+            <!-- /.table-responsive -->
+        </div>
+    <!-- column -->
+
+</div>
+
+    </div>
+
+{% endblock %}

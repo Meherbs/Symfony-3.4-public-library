@@ -1,0 +1,24 @@
+Adherent_index:
+    path:     /
+    defaults: { _controller: "FilmBundle:Adherent:index" }
+    methods:  GET
+
+Adherent_show:
+    path:     /{idAdherent}/show
+    defaults: { _controller: "FilmBundle:Adherent:show" }
+    methods:  GET
+
+Adherent_new:
+    path:     /new
+    defaults: { _controller: "FilmBundle:Adherent:new" }
+    methods:  [GET, POST]
+
+Adherent_edit:
+    path:     /{idAdherent}/edit
+    defaults: { _controller: "FilmBundle:Adherent:edit" }
+    methods:  [GET, POST]
+
+Adherent_delete:
+    path:     /{idAdherent}/delete
+    defaults: { _controller: "FilmBundle:Adherent:delete" }
+    methods:  DELETE

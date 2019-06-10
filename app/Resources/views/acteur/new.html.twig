@@ -1,0 +1,84 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="box" style="margin-left: 16%; margin-right: 25%; width: 70%; margin-top: 2%; padding-bottom: 2% ">
+        <div class="box-header">
+            <h3 class="box-title"> Acteur creation</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body no-padding">
+            {{ form_start(form) }}
+            <table class="table table-condensed table-responsive" style="margin-left: 15%">
+
+                <tr>
+                    <th width="10%"> Nom </th>
+                    <td width="20%">
+                        {{ form_widget(form.nom) }}
+                    </td>
+                    <td width="10%">
+
+                    </td>
+                </tr>
+                <tr>
+                    <th width="10%"> Prenom </th>
+                    <td width="20%" class="offset-md-5">
+                        {{ form_widget(form.prenom) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th width="10%"> Date de naissance </th>
+                    <td width="20%" class="offset-md-5">
+                        {{ form_widget(form.dateNaiss) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th width="10%"> Sexe </th>
+                    <td width="20%" class="offset-md-5">
+                        {{ form_widget(form.sexe) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th width="10%"> Nationalité </th>
+                    <td width="20%" class="offset-md-5">
+                        {{ form_widget(form.nationalite) }}
+                    </td>
+                </tr>
+                <tr style="display: none">
+                    <th width="10%"> Date de création </th>
+                    <td width="20%" class="offset-md-5">
+                        {{ form_widget(form.createdAt) }}
+                    </td>
+                </tr>
+                <tr style="display: none">
+                    <th width="10%"> Date de mise à jours </th>
+                    <td width="20%" class="offset-md-5">
+                        {{ form_widget(form.updatedAt) }}
+                    </td>
+                </tr>
+                <tr>
+                    <th width="10%"> Film </th>
+                    <td width="20%" class="offset-md-5">
+                        {{ form_widget(form.film) }}
+                    </td>
+                </tr>
+
+            </table>
+            <div class="row">
+                <div class="col-md-2 offset-md-1"  style="margin-left: 32%;">
+                    <span> {{ form_widget(form.sauvegarder) }}</span>
+                </div>
+
+                <div class="col-md-3">
+                    <a class="btn btn-info" href="{{ path('Auteur_index') }}">Back to the list</a>
+                </div>
+                {{ form_end(form) }}
+            </div>
+
+
+
+        </div>
+        <!-- /.box-body -->
+    </div>
+{% endblock %}

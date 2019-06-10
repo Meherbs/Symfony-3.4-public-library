@@ -1,0 +1,73 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row" style="height: auto">
+        <section class="content-header">
+            <h1>
+                Liste des Catégories
+                <small class="list-group-item-action">
+                    <a href="{{ path('Categorie_new') }}">Create a new categorie</a>
+                </small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="#"> Catégories </a></li>
+                <li class="active">Liste des catégorie</li>
+            </ol>
+        </section>
+        <div class="row">
+            <!-- Content Header (Page header) -->
+
+
+            <!-- /.box-header -->
+            <div class="box-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-success">
+                        {% for categorie in categories %}
+                        <tr>
+                            <th class="text-center"> Category Id </th>
+                            <th class="text-center"> Categorie Design </th>
+                            <th class="text-center"> Liste of {{ categorie.designCategorie }} films  </th>
+                            <th></th>
+
+                        </tr>
+                        </thead>
+                        <tbody class="tabcontent-border">
+
+                            <tr>
+                                <td class="text-center"><a href="{{ path('Categorie_show', { 'idCategorie': categorie.idCategorie }) }}">{{ categorie.idCategorie }}</a></td>
+                                <td class="text-center">{{ categorie.designCategorie }}</td>
+
+                                <td class="text-center"><a href="{{ path('Categorie_film', { 'idCategorie': categorie.idCategorie }) }}">Voir la liste</a></td>
+                                <td>
+
+                                        <li>
+                                            {{ render(controller('FilmBundle:Categorie:show',{'id':categorie.idCategorie})) }}
+                                        </li>
+                                        <li>
+                                            <a href="{{ path('Categorie_edit', { 'idCategorie': categorie.idCategorie }) }}">edit</a>
+                                        </li>
+
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="navigation text-center">
+                    {{ knp_pagination_render(categories) }}
+                </div>
+
+                <!-- /.table-responsive -->
+            </div>
+            <!-- column -->
+
+        </div>
+
+    </div>
+
+{% endblock %}

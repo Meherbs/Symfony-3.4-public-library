@@ -1,0 +1,97 @@
+
+{% block body %}
+
+    <a class="aff" id="{{ adherent.idAdherent }}" href="" data-toggle="modal"
+       data-target="#modal-primary{{ adherent.idAdherent }}"> show adhérent </a>
+
+    <div class="modal modal-primary fade" id="modal-primary{{ adherent.idAdherent }}">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title text-center">Information de l'adhérent {{ adherent.idAdherent }} </h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table-responsive table-condensed tab-success" style="margin-left: 8%">
+                        <tr>
+                            <th width="10% mar" style="font-size: 18px"> Identifiant de l'adhérent</th>
+                            <td width="10%" style="font-size: 18px">
+                                {{ adherent.idAdherent }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="10%" style="font-size: 18px"> Nom</th>
+                            <td width="10%" style="font-size: 18px">
+                                {{ adherent.nom }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="10%" style="font-size: 18px"> Prenom</th>
+                            <td width="10%" class="offset-md-3" style="font-size: 18px">
+                                {{ adherent.prenom }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="10%" style="font-size: 18px"> Cin</th>
+                            <td width="10%" class="offset-md-3" style="font-size: 18px">
+                                {{ adherent.cin }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="10%" style="font-size: 18px"> Date de naissance</th>
+                            <td width="10%" style="font-size: 18px">
+                                {% if adherent.dateNaiss %}{{ adherent.dateNaiss|date('Y-m-d') }}{% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="10%" style="font-size: 18px"> Sexe</th>
+                            <td width="10%" class="offset-md-3" style="font-size: 18px">
+                                {% if adherent.sexe %}Homme{% else %}Femme{% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="10%" style="font-size: 18px"> Numéro de téléphone</th>
+                            <td width="10%" style="font-size: 18px" class="offset-md-3">
+                                {{ adherent.tel }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="10%" style="font-size: 18px"> Adresse</th>
+                            <td width="10%" class="offset-md-3" style="font-size: 18px">
+                                {{ adherent.adresse }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="10%" style="font-size: 18px"> Date de création</th>
+                            <td width="10%" class="offset-md-3" style="font-size: 18px">
+                                {% if adherent.createdAt %}{{ adherent.createdAt|date('Y-m-d H:i:s') }}{% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="10%" style="font-size: 18px"> Date de mise à jours</th>
+                            <td width="10%" class="offset-md-3" style="font-size: 18px">
+                                {% if adherent.updatedAt %}{{ adherent.updatedAt|date('Y-m-d H:i:s') }}{% endif %}
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">Close</button>
+                    {{ form_start(delete_form) }}
+                    <input type="submit" class="btn btn-outline" value="Delete">
+                    {{ form_end(delete_form) }}
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    </div>
+
+
+
+
+{% endblock %}

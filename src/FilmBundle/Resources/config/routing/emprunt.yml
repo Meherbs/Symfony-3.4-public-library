@@ -1,0 +1,44 @@
+Emprunt_index:
+  path:     /
+  defaults: { _controller: "FilmBundle:Emprunt:index" }
+  methods:  GET
+
+Emprunt_notReturned:
+  path:     /emprunts/encours
+  defaults: { _controller: "FilmBundle:Emprunt:filmNonReturned" }
+  methods:  GET
+
+Emprunt_show:
+  path:     /{idEmprunt}/show
+  defaults: { _controller: "FilmBundle:Emprunt:show" }
+  methods:  GET
+
+Emprunt_new:
+  path:     /new
+  defaults: { _controller: "FilmBundle:Emprunt:new" }
+  methods:  [GET, POST]
+
+Emprunt_edit:
+  path:     /{idEmprunt}/edit
+  defaults: { _controller: "FilmBundle:Emprunt:edit" }
+  methods:  [GET, POST]
+
+Emprunt_delete:
+  path:     /{idEmprunt}/delete
+  defaults: { _controller: "FilmBundle:Emprunt:delete" }
+  methods:  DELETE
+
+Emprunt_supp:
+  path:     /{idEmprunt}/cancel
+  defaults: { _controller: "FilmBundle:Emprunt:deleteNew" }
+  methods:  GET
+
+Emprunt_del:
+  path:     /{idEmprunt}/supp
+  defaults: { _controller: "FilmBundle:Emprunt:del" }
+  methods:  DELETE
+
+Emprunt_add:
+  path:     /{idAdherent}/new
+  defaults: { _controller: "FilmBundle:Emprunt:turn" }
+  methods:  [GET, POST]

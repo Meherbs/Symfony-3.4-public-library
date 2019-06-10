@@ -1,0 +1,70 @@
+
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row" style="height: auto">
+        <section class="content-header">
+            <h1>
+                Liste des <code>adherants</code>
+                <small class="list-group-item-action">
+                    <a href="{{ path('Adherent_new') }}">Creer un nouveau adherant </a>
+                </small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="#"> Adherant </a></li>
+                <li class="active">Liste des Adherants</li>
+            </ol>
+        </section>
+        <div class="">
+            <!-- Content Header (Page header) -->
+
+
+            <!-- /.box-header -->
+            <div class="box-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th width="20%" style="text-align: center">Identifiant de l'adherant</th>
+                            <th style="text-align: center">Nom</th>
+                            <th style="text-align: center">Prenom</th>
+                            <th style="text-align: center">Sexe</th>
+                            <th style="text-align: center">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for adherent in adherents %}
+                            <tr>
+                                <td width="15%" style="text-align: center">
+                                    {{ adherent.idAdherent }}
+                                </td>
+                                <td style="text-align: center">{{ adherent.nom }}</td>
+                                <td style="text-align: center">{{ adherent.prenom }}</td>
+                                <td style="text-align: center">{% if adherent.sexe %}Homme{% else %}Femme{% endif %}</td>
+                                <td >
+                                    <ul>
+                                        <li style="margin-left: 32%">
+                                            {{ render(controller('FilmBundle:Adherent:show',{'id':adherent.idAdherent})) }}
+                                        </li>
+                                        <li style="margin-left: 32%">
+                                            <a href="{{ path('Adherent_edit', { 'idAdherent': adherent.idAdherent }) }}">Editer</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.table-responsive -->
+            </div>
+            <!-- column -->
+
+        </div>
+
+    </div>
+
+{% endblock %}

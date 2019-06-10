@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="col-md-4 box-info" style="height: auto; background-color: white;margin-left: 2%; margin-top: 4%;padding-bottom: 2%">
+            <div class="box-header">
+                <h1 class="box-title"> <code>Emprunter</code> des films  </h1>
+                <div class="box" style="margin-left: 6%; margin-right: 25%; width: 85%; margin-top: 2%">
+                    <div style="margin-left: 2%;margin-top: 2%; font-size: 14px">
+                        <a style="margin-left: 5%;" href="{{ path('Emprunt_index') }}">Back to the list</a>
+                    </div>
+
+                </div>
+                <div class="box" style="margin-left: 6%; margin-right: 25%; width: 85%; margin-top: 2%">
+                    <div style="margin-left: 2%;margin-top: 2%; font-size: 14px">
+                        <a style="margin-left: 5%;" href="{{ path('Emprunt_new') }}">Emprunter pour un autre</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="box-header">
+                <h1 class="box-title">Adhérent  </h1>
+                <div class="box" style="margin-left: 6%; margin-right: 25%; width: 85%; padding-bottom: 2%">
+                    <div style="margin-left: 2%;margin-top: 2%; font-size: 14px">
+                        <code> {% if adherent %} {{ adherent.nom ~ ' ' ~ adherent.prenom }} {% endif %}</code>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-condensed table-responsive" style="margin-top: 1%">
+                    {{ form_start(form) }}
+                <tr>
+
+                    <th width="5%">
+                        <div class="box-header">
+                            <h1 class="box-title">Film  </h1>
+                        </div>
+                    </th><td></td>
+                </tr>
+                <tr>
+
+                        <td width="79%">
+                            <div class="box" style="margin-left: 6%; width: 85%; padding-bottom: 2%">
+                            {{ form_start(form) }}
+                            <div style="margin-left: 2%;margin-top: 2%; font-size: 14px">
+                                     {{ form_widget(form.film) }}
+
+                            </div>
+                            </div>
+                         </td>
+
+                         <td >
+                            <div style="margin-left: 1%;margin-top: 25%">
+                                 <button type="submit">
+                                      <i class="fa fa-plus-square" style="font-size:24px"></i>
+                                 </button>
+                             </div>
+                         </td>
+                        <td></td>
+
+                </tr>
+                <tr style="display: none">
+                    <td width="5%">
+                        {{ form_widget(form.dhEmprunt) }}
+                    </td>
+                    <td width="55%"></td>
+                    <td></td>
+                </tr>
+                <tr style="display: none">
+                    <td width="5%">
+                        {{ form_widget(form.adherent) }}
+                    </td>
+                    <td width="55%"></td><td></td>
+                </tr>
+                <tr style="display: none">
+                    <td width="5%">
+                        {{ form_widget(form.dhRetour) }}
+                    </td>
+                    <td width="55%"></td><td></td>
+                </tr>
+            </table>
+            {{ form_end(form) }}
+        </div>
+        <div class="col-md-7 " style="height: auto; background-color: white; margin-left: 2%;margin-top: 4%">
+            <table class="table table-hover">
+                <thead class="table-success">
+                <tr>
+                    <th class="text-center">Id_Emprunt</th>
+                    <th class="text-center">Film</th>
+
+                    <th class="text-center">Actions</th>
+                </tr>
+                </thead>
+                <tbody class="tabcontent-border">
+                {% for temp in emprunt %}
+                    <tr >
+                        <td class="text-center" style="text-align: center">
+                            {% if temp.getIdEmprunt() %} {{ temp.getIdEmprunt() }} {% endif %}
+                        </td>
+                        <td class="text-center" >{% if temp.getFilm() %} {{ temp.getFilm().getTitre() }} {% endif %}</td>
+                        <td class="text-center">
+
+
+                                {% if temp.getIdEmprunt() %}
+                                    {{ render(controller('FilmBundle:Emprunt:deleteNew',{'idEmprunt':temp.getIdEmprunt()})) }}
+                                {% endif %}
+
+
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+{% endblock %}

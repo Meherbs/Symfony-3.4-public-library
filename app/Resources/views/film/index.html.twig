@@ -1,0 +1,54 @@
+
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+
+    <div class="row">
+        <section class="content-header">
+            <h1>
+                Liste des filmes
+                <small class="list-group-item-action">
+                    <a href="{{ path('Film_new') }}">Create a new film</a>
+                </small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="#"> Acteurs </a></li>
+                <li class="active">Liste des acteurs</li>
+            </ol>
+        </section>
+        <div class="">
+            <!-- Content Header (Page header) -->
+            <h1 style="text-align: center;text-transform: uppercase;font-weight: 400;letter-spacing: 2px;font-size: 24px;">
+                Show {{ category }} Films </h1>
+
+                <div class="cont">
+                    <div class="row">
+                    {% for film in films %}
+                        <div class="col-md-3" style="margin: 30px" >
+                                <a href="{{ path('Film_show', { 'idFilm': film.idFilm }) }}" class="titleOverImage" style="
+                                        background-image:url({{ asset('images/film/') }}{{ film.couverture }}); height: 400px"
+                                   data-text="{{ film.titre }}
+
+{{ film.description }}" >
+                                </a> <a style="margin-left: 40%;text-align: center;text-transform: uppercase;font-weight: 200;letter-spacing: 1px;font-size: 16px;"
+                                        href="{{ path('Film_edit', { 'idFilm': film.idFilm }) }}">editer ce film</a>
+
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            <div class="navigation text-center">
+                {{ knp_pagination_render(films) }}
+            </div>
+
+            <!-- /.box-header -->
+
+
+    </div>
+
+    </div>
+
+{% endblock %}

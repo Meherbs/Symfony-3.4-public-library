@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <div class="box" style="margin-left: 16%; margin-right: 25%; width: 70%; margin-top: 2%; padding-bottom: 2% ">
+        <div class="box-header">
+            <h3 class="box-title"> Ajouter un adhérant</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body no-padding">
+            {{ form_start(form) }}
+            <table class="table table-condensed table-responsive" style="margin-left: 10%">
+
+                <tr>
+                    <th width="5%"> Nom </th>
+                    <td width="20%">
+                        <div style="margin-right: 30%">{{ form_widget(form.nom) }}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th width="5%"> Prenom </th>
+                    <td width="20%" class="offset-md-5">
+                        <div style="margin-right: 30%">{{ form_widget(form.prenom) }}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th width="5%"> Date de naissance </th>
+                    <td width="20%" class="offset-md-5">
+                        <div style="margin-right: 30%">{{ form_widget(form.dateNaiss) }}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th width="5%"> Adresse </th>
+                    <td width="20%" class="offset-md-5">
+                        <div style="margin-right: 30%"> {{ form_widget(form.adresse) }}</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th width="5%"> Sexe </th>
+                    <td width="20%" class="offset-md-5">
+                        <div style="margin-right: 30%"> {{ form_widget(form.sexe) }}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th width="5%"> Cin </th>
+                    <td width="20%" class="offset-md-5">
+                        <div style="margin-right: 30%"> {{ form_widget(form.cin) }}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <th width="5%"> Numéro de téléphone </th>
+                    <td width="20%" class="offset-md-5">
+                        <div style="margin-right: 30%"> {{ form_widget(form.tel) }}</div>
+                    </td>
+                </tr>
+                <tr style="display: none">
+                    <th width="5%"> Date de création </th>
+                    <td width="20%" class="offset-md-5">
+                        <div style="margin-right: 30%"> {{ form_widget(form.createdAt) }}</div>
+                    </td>
+                </tr>
+                <tr style="display: none">
+                    <th width="5%"> Date de mise à jours </th>
+                    <td width="20%" class="offset-md-5">
+                        <div style="margin-right: 30%"> {{ form_widget(form.updatedAt) }}</div>
+                    </td>
+                </tr>
+
+
+            </table>
+            <div class="row">
+
+                <div class="col-md-6" style="margin-left: 35%">
+                    <input class="btn btn-info" type="submit" value="Ajouter" />
+                    <a class="btn btn-info" href="{{ path('Adherent_index') }}">Back to the list</a>
+                </div>
+                {{ form_end(form) }}
+            </div>
+
+
+
+        </div>
+        <!-- /.box-body -->
+    </div>
+{% endblock %}

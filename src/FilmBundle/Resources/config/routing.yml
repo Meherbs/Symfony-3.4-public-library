@@ -1,0 +1,23 @@
+film_Film:
+    resource: "@FilmBundle/Resources/config/routing/film.yml"
+    prefix:   /Film
+
+film_Emprunt:
+    resource: "@FilmBundle/Resources/config/routing/emprunt.yml"
+    prefix:   /Emprunt
+
+film_Categorie:
+    resource: "@FilmBundle/Resources/config/routing/categorie.yml"
+    prefix:   /Categorie
+
+film_Adherent:
+    resource: "@FilmBundle/Resources/config/routing/adherent.yml"
+    prefix:   /Adherent
+
+film_Auteur:
+    resource: "@FilmBundle/Resources/config/routing/acteur.yml"
+    prefix:   /Auteur
+
+film_homepage:
+    path:     /home
+    defaults: { _controller: FilmBundle:Default:index }

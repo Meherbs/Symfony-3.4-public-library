@@ -1,0 +1,107 @@
+
+{% extends 'base.html.twig' %}
+
+    {% block body %}
+        <div class="row" style="margin-left: 2%">
+            <div class="col-md-2">
+                <div class="box" style="width: 280%;height: 490px; margin-top: 10%; padding-bottom: 2% ">
+                    <div class="box-header text-center">
+                        <h1 class="box-title"> Editer l'adhérent <code>{{ adherent.nom }} {{ adherent.prenom }}</code></h1>
+                    </div>
+                    <img width="350px" height="420px" src="{{ asset('images/anonyme.jpg') }}">
+                </div>
+            </div>
+            <div class="col-md-9">
+
+                <div class="box" style="margin-left: 33%; margin-right: 20%; width: 66%; margin-top: 2%; padding-bottom: 2%;height: 490px ">
+
+                    <!-- /.box-header -->
+                    <div class="box-body no-padding">
+                        {{ form_start(edit_form) }}
+                        <div class="box-header text-center" style="margin-top: 6%">
+                            <h1 class="box-title"> Informations de l'adhérent <code>{{ adherent.nom }} {{ adherent.prenom }}</code></h1>
+                        </div>
+                        <table class="table table-condensed table-responsive" style="margin-left: 5%;margin-top: 6%">
+
+                            <tr >
+                                <th width="5%"> Nom </th>
+                                <td width="15%">
+                                    {{ form_widget(edit_form.nom) }}
+                                </td>
+                                <td width="3%"></td>
+                            </tr>
+                            <tr >
+                                <th width="5%"> Prenom </th>
+                                <td width="15%" >
+                                    {{ form_widget(edit_form.prenom) }}
+                                </td> <td width="3%"></td>
+                            </tr >
+                            <tr >
+                                <th width="5%"> Date de naissance </th>
+                                <td width="15%" >
+                                    {{ form_widget(edit_form.dateNaiss) }}
+                                </td> <td width="3%"></td>
+                            </tr>
+                            <tr >
+                                <th width="5%"> sexe </th>
+                                <td width="15%" >
+                                    {{ form_widget(edit_form.sexe) }}
+                                </td> <td width="3%"></td>
+                            </tr>
+                            <tr >
+                                <th width="5%"> Cin </th>
+                                <td width="15%" >
+                                    {{ form_widget(edit_form.cin) }}
+                                </td> <td width="3%"></td>
+                            </tr>
+
+                            <tr  >
+                                <th width="5%"> Numéro de téléphone</th>
+                                <td width="15%" >
+                                    {{ form_widget(edit_form.tel) }}
+                                </td> <td width="3%"></td>
+                            </tr>
+                            <tr  >
+                                <th width="5%"> Adresse </th>
+                                <td width="15%" >
+                                    {{ form_widget(edit_form.adresse) }}
+                                </td> <td width="3%"></td>
+                            </tr>
+
+                            <tr style="display: none">
+                                <th width="5%"> Date dde creation </th>
+                                <td width="15%" >
+                                    {{ form_widget(edit_form.createdAt) }}
+                                </td> <td width="3%"></td>
+                            </tr>
+                            <tr style="display: none">
+                                <th width="5%"> Date de mise a jour </th>
+                                <td width="15%" >
+                                    {{ form_widget(edit_form.updatedAt) }}
+                                </td> <td width="3%"></td>
+                            </tr>
+
+                        </table>
+                        <div class="row">
+                            <div class="col-md-2 offset-md-1"  style="margin-left: 32%;">
+                                 <input type="submit" value="Edit" class="btn btn-outline-primary"/>
+                                {{ form_end(edit_form) }}
+                            </div>
+
+                            <div class="col-md-3">
+                                <a class="btn btn-info" href="{{ path('Adherent_index') }}">Back to the list</a>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+
+            </div>
+        </div>
+
+
+    {% endblock %}
